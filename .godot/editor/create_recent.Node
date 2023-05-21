@@ -1,0 +1,11 @@
+CollisionShape2D
+Area2D
+CollisionPolygon2D
+Node2D
+Sprite2D
+AnimationPlayer
+SpawnTimer
+VisibleOnScreenNotifier2D
+Timer
+Node
+Camera2D

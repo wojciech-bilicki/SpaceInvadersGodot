@@ -1,0 +1,16 @@
+res://Scenes/bunker.tscn
+res://Resources/invader_config.gd
+res://Scenes/invader.gd
+res://Scenes/bunker.gd
+res://Scenes/bunker_part.gd
+res://Scenes/main.tscn
+res://Scenes/player.tscn
+res://Scenes/laser.tscn
+res://Scenes/bullet_catcher.tscn
+res://Scenes/invader_spawner.tscn
+res://Scenes/invader.tscn
+res://Scenes/invader_shot.tscn
+res://ufo_spawner.tscn
+res://Scenes/ufo.tscn
+res://Scenes/ufo.gd
+res://Scenes/invader_spawner.gd

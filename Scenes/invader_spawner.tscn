@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://mgomvu2yo3u5"]
+
+[ext_resource type="Script" path="res://Scenes/invader_spawner.gd" id="1_qphax"]
+
+[node name="InvaderSpawner" type="Node2D"]
+script = ExtResource("1_qphax")
+
+[node name="MovementTimer" type="Timer" parent="."]
+wait_time = 0.25
+autostart = true
+
+[node name="ShotTimer" type="Timer" parent="."]
+autostart = true

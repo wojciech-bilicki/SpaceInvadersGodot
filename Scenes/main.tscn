@@ -1,0 +1,73 @@
+[gd_scene load_steps=8 format=3 uid="uid://x52tm03ns8q"]
+
+[ext_resource type="PackedScene" uid="uid://dtone6hpojcx1" path="res://Scenes/player.tscn" id="1_tywl6"]
+[ext_resource type="PackedScene" uid="uid://dfn1yx70sdynd" path="res://Scenes/bullet_catcher.tscn" id="2_0880y"]
+[ext_resource type="PackedScene" uid="uid://mgomvu2yo3u5" path="res://Scenes/invader_spawner.tscn" id="3_sn81r"]
+[ext_resource type="PackedScene" uid="uid://dn47qdhpsw0s2" path="res://ufo_spawner.tscn" id="4_melfw"]
+[ext_resource type="PackedScene" uid="uid://c8bxce3fgs58i" path="res://Scenes/bunker.tscn" id="5_y4p5m"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8uhrm"]
+size = Vector2(40, 617)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w8kjt"]
+size = Vector2(1200, 20)
+
+[node name="main" type="Node"]
+
+[node name="Player" parent="." instance=ExtResource("1_tywl6")]
+position = Vector2(0, 302)
+
+[node name="BulletCatcher" parent="." instance=ExtResource("2_0880y")]
+position = Vector2(-581, -326)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Walls" type="Node" parent="."]
+
+[node name="RightWall" type="Area2D" parent="Walls"]
+position = Vector2(578, 2)
+collision_layer = 32
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/RightWall"]
+position = Vector2(-22, 0)
+shape = SubResource("RectangleShape2D_8uhrm")
+
+[node name="LeftWall" type="Area2D" parent="Walls"]
+position = Vector2(-575, 0)
+collision_layer = 32
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/LeftWall"]
+position = Vector2(19, 0)
+shape = SubResource("RectangleShape2D_8uhrm")
+
+[node name="BottomWall" type="Area2D" parent="Walls"]
+position = Vector2(0, 318)
+collision_layer = 32
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/BottomWall"]
+position = Vector2(1, 0)
+shape = SubResource("RectangleShape2D_w8kjt")
+
+[node name="UfoSpawner" parent="." instance=ExtResource("4_melfw")]
+position = Vector2(491, -264)
+
+[node name="InvaderSpawner" parent="." instance=ExtResource("3_sn81r")]
+position = Vector2(0, -189)
+
+[node name="Bunker" parent="." instance=ExtResource("5_y4p5m")]
+position = Vector2(-365, 204)
+
+[node name="Bunker2" parent="." instance=ExtResource("5_y4p5m")]
+position = Vector2(-148, 204)
+
+[node name="Bunker3" parent="." instance=ExtResource("5_y4p5m")]
+position = Vector2(148, 209)
+
+[node name="Bunker4" parent="." instance=ExtResource("5_y4p5m")]
+position = Vector2(365, 209)
+
+[connection signal="area_entered" from="Walls/RightWall" to="InvaderSpawner" method="_on_right_wall_area_entered"]
+[connection signal="area_entered" from="Walls/LeftWall" to="InvaderSpawner" method="_on_left_wall_area_entered"]
