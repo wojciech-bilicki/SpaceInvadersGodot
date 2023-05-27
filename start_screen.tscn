@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=3 uid="uid://dxhb6c2kqw5c7"]
+
+[ext_resource type="Script" path="res://start_screen.gd" id="1_co0ne"]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+script = ExtResource("1_co0ne")
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Button" type="Button" parent="CenterContainer"]
+layout_mode = 2
+text = "Start Game"
+
+[connection signal="pressed" from="CenterContainer/Button" to="." method="load_game"]

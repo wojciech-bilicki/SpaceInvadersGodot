@@ -1,3 +1,12 @@
+Button
+CenterContainer
+CanvasLayer
+Label
+VBoxContainer
+TextureRect
+HBoxContainer
+MarginContainer
+Node
 CollisionShape2D
 Area2D
 CollisionPolygon2D
@@ -7,5 +16,4 @@ AnimationPlayer
 SpawnTimer
 VisibleOnScreenNotifier2D
 Timer
-Node
 Camera2D

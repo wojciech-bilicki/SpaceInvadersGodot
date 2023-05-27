@@ -38,7 +38,7 @@ position = Vector2(4, 0.25)
 
 [node name="TopLeft" type="Area2D" parent="BunkerRight" node_paths=PackedStringArray("sprite")]
 collision_layer = 16
-collision_mask = 10
+collision_mask = 14
 script = ExtResource("1_qiykm")
 sprite = NodePath("SpriteTopMiddleRight")
 sprite_array = Array[Texture2D]([ExtResource("2_pr2en"), ExtResource("3_7wwiy"), ExtResource("4_k115v")])
@@ -53,7 +53,7 @@ texture = ExtResource("1_2afe7")
 [node name="TopRight" type="Area2D" parent="BunkerRight" node_paths=PackedStringArray("sprite")]
 position = Vector2(8, 1)
 collision_layer = 16
-collision_mask = 10
+collision_mask = 14
 script = ExtResource("1_qiykm")
 sprite = NodePath("SpriteTopEndRight")
 sprite_array = Array[Texture2D]([ExtResource("6_84g80"), ExtResource("7_dl530"), ExtResource("8_6lawc")])
@@ -69,7 +69,7 @@ shape = SubResource("RectangleShape2D_g8j4h")
 [node name="BottomLeft" type="Area2D" parent="BunkerRight" node_paths=PackedStringArray("sprite")]
 position = Vector2(2.25, 7.5)
 collision_layer = 16
-collision_mask = 10
+collision_mask = 14
 script = ExtResource("1_qiykm")
 sprite = NodePath("SpriteBottomMiddleRight")
 sprite_array = Array[Texture2D]([ExtResource("10_wrugb"), ExtResource("11_fqbfp"), ExtResource("12_hq4nl")])
@@ -85,7 +85,7 @@ texture = ExtResource("3_fkfbf")
 [node name="BottomRight" type="Area2D" parent="BunkerRight" node_paths=PackedStringArray("sprite")]
 position = Vector2(8, 8)
 collision_layer = 16
-collision_mask = 10
+collision_mask = 14
 script = ExtResource("1_qiykm")
 sprite = NodePath("SpriteBottomEndRight")
 sprite_array = Array[Texture2D]([ExtResource("14_if462"), ExtResource("15_wv534"), ExtResource("16_v5xfv")])
@@ -104,7 +104,7 @@ scale = Vector2(-1, 1)
 
 [node name="TopLeft" type="Area2D" parent="BunkerRight2" node_paths=PackedStringArray("sprite")]
 collision_layer = 16
-collision_mask = 10
+collision_mask = 14
 script = ExtResource("1_qiykm")
 sprite = NodePath("SpriteTopMiddleRight")
 sprite_array = Array[Texture2D]([ExtResource("2_pr2en"), ExtResource("3_7wwiy"), ExtResource("4_k115v")])
@@ -119,7 +119,7 @@ texture = ExtResource("1_2afe7")
 [node name="TopRight" type="Area2D" parent="BunkerRight2" node_paths=PackedStringArray("sprite")]
 position = Vector2(8, 1)
 collision_layer = 16
-collision_mask = 10
+collision_mask = 14
 script = ExtResource("1_qiykm")
 sprite = NodePath("SpriteTopEndRight")
 sprite_array = Array[Texture2D]([ExtResource("6_84g80"), ExtResource("7_dl530"), ExtResource("8_6lawc")])
@@ -135,7 +135,7 @@ shape = SubResource("RectangleShape2D_g8j4h")
 [node name="BottomLeft" type="Area2D" parent="BunkerRight2" node_paths=PackedStringArray("sprite")]
 position = Vector2(2.25, 7.5)
 collision_layer = 16
-collision_mask = 10
+collision_mask = 14
 script = ExtResource("1_qiykm")
 sprite = NodePath("SpriteBottomMiddleRight")
 sprite_array = Array[Texture2D]([ExtResource("10_wrugb"), ExtResource("11_fqbfp"), ExtResource("12_hq4nl")])
@@ -151,7 +151,7 @@ texture = ExtResource("3_fkfbf")
 [node name="BottomRight" type="Area2D" parent="BunkerRight2" node_paths=PackedStringArray("sprite")]
 position = Vector2(8, 8)
 collision_layer = 16
-collision_mask = 10
+collision_mask = 14
 script = ExtResource("1_qiykm")
 sprite = NodePath("SpriteBottomEndRight")
 sprite_array = Array[Texture2D]([ExtResource("14_if462"), ExtResource("15_wv534"), ExtResource("16_v5xfv")])

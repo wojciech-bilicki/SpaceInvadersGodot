@@ -3,6 +3,8 @@ class_name Player
 
 @export var speed = 200
 
+signal player_destroyed
+
 var direction = Vector2.ZERO
 @onready var collision_rect: CollisionShape2D = $CollisionShape2D
 @onready var  animation_player = $AnimationPlayer
@@ -40,10 +42,15 @@ func _process(delta):
 
 
 func on_player_destroyed():
+	speed = 0
 	animation_player.play("destroy")
+	
 
 
 func _on_animation_player_animation_finished(anim_name):
 	# TODO: lose life
+	
 	if anim_name == "destroy":
+		await get_tree().create_timer(1).timeout
+		player_destroyed.emit()
 		queue_free()

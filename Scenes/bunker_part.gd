@@ -20,3 +20,6 @@ func _on_area_entered(area):
 			sprite.texture = sprite_array[damage - 1]
 		else:
 			queue_free()
+	
+	if area is Invader:
+		queue_free()
