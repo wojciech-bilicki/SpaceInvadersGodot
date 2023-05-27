@@ -14,7 +14,7 @@ var life_texture = preload("res://Assets/Player/Player.png")
 @export var life_manager: LifeManager
 
 func _ready():
-	points_label.text = "%d" % 0
+	points_label.text = "SCORE: %d" % 0
 	points_counter.on_points_increased.connect(points_increased)
 	invader_spawner.game_lost.connect(on_game_lost)
 	invader_spawner.game_won.connect(on_game_won)
@@ -26,14 +26,14 @@ func _ready():
 	for i in range(lifes_count):
 		var life_texture_rect = TextureRect.new()
 		life_texture_rect.expand_mode = TextureRect.EXPAND_KEEP_SIZE
-		life_texture_rect.custom_minimum_size = Vector2(25, 25)
+		life_texture_rect.custom_minimum_size = Vector2(40, 25)
 		life_texture_rect.texture_filter = CanvasItem.TEXTURE_FILTER_NEAREST
 		life_texture_rect.texture = life_texture
 		lifes_ui_container.add_child(life_texture_rect)
 	
 
 func points_increased(points: int):
-	points_label.text = "%d" % points
+	points_label.text = "SCORE: %d" % points
 	
 func on_game_lost():
 	center_container.visible = true

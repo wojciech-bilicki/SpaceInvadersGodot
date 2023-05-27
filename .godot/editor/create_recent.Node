@@ -1,11 +1,12 @@
+Timer
+Label
+HBoxContainer
+VBoxContainer
+MarginContainer
+TextureRect
 Button
 CenterContainer
 CanvasLayer
-Label
-VBoxContainer
-TextureRect
-HBoxContainer
-MarginContainer
 Node
 CollisionShape2D
 Area2D
@@ -15,5 +16,4 @@ Sprite2D
 AnimationPlayer
 SpawnTimer
 VisibleOnScreenNotifier2D
-Timer
 Camera2D

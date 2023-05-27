@@ -6,6 +6,7 @@ signal invader_destroyed(points: int)
 signal game_won
 signal game_lost
 
+
 const ROWS = 5
 const COLUMNS = 11
 const HORIZONTAL_SPACING = 32

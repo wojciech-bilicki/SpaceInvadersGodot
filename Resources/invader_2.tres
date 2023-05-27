@@ -10,4 +10,4 @@ sprite_1 = ExtResource("2_3jjh1")
 sprite_2 = ExtResource("3_pn6rs")
 width = 11
 animation_name = "move_2"
-points = 200
+points = 40
